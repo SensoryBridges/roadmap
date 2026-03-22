@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)file:///C:/Users/qxb843/Downloads/sensory-bridges-roadmap%20(4).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sensory Bridges — Strategic Roadmap</title>
+<link href="./index_files/css2" rel="stylesheet">
+<style>
+:root {
+  --teal: #0A8F8F;
+  --teal-light: #E0F5F5;
+  --teal-mid: #5CC5C5;
+  --navy: #0F2030;
+  --warm: #F5F0EB;
+  --gold: #D4A843;
+  --gold-light: #FFF8E7;
+  --coral: #E8765A;
+  --coral-light: #FFF0EC;
+  --purple: #6B5B95;
+  --purple-light: #F0ECF5;
+  --green: #3D8B37;
+  --green-light: #ECF5EC;
+  --text: #1A2B3C;
+  --text-muted: #5A6A7A;
+  --card-shadow: 0 2px 12px rgba(15,32,48,0.08);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--warm);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, var(--navy) 0%, #1A3548 60%, var(--teal) 100%);
+  padding: 56px 0 48px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: var(--warm);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+header .container { position: relative; z-index: 1; }
+header h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+header .subtitle {
+  font-size: 1.15rem;
+  opacity: 0.85;
+  max-width: 720px;
+  font-weight: 400;
+}
+.badge-row { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+.badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.badge-teal { background: rgba(92,197,197,0.2); color: #A8E8E8; border: 1px solid rgba(92,197,197,0.3); }
+.badge-gold { background: rgba(212,168,67,0.2); color: #F5D98A; border: 1px solid rgba(212,168,67,0.3); }
+.badge-coral { background: rgba(232,118,90,0.2); color: #F5B8A8; border: 1px solid rgba(232,118,90,0.3); }
+
+/* ===== VISUAL-ONLY FLOW SECTION ===== */
+.visual-flow-section {
+  padding: 48px 0 8px;
+}
+.flow-canvas {
+  max-width: 1060px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 48px 28px 40px;
+  box-shadow: var(--card-shadow);
+  overflow-x: auto;
+}
+.flow-scroll {
+  min-width: 880px;
+}
+
+/* Top Phase Row */
+.flow-phase-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 6px;
+}
+.flow-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  width: 86px;
+}
+.flow-icon-ring {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.12);
+}
+.flow-icon-ring.teal { background: linear-gradient(135deg, var(--teal), var(--teal-mid)); }
+.flow-icon-ring.gold { background: linear-gradient(135deg, #C49A30, var(--gold)); }
+.flow-icon-ring.coral { background: linear-gradient(135deg, var(--coral), #F09880); }
+.flow-icon-ring.purple { background: linear-gradient(135deg, var(--purple), #8B7BB5); }
+.flow-icon-ring.green { background: linear-gradient(135deg, var(--green), #5AAF54); }
+.flow-tag {
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+.flow-tag.teal { background: var(--teal-light); color: var(--teal); }
+.flow-tag.gold { background: var(--gold-light); color: #B08A30; }
+.flow-tag.coral { background: var(--coral-light); color: var(--coral); }
+.flow-tag.purple { background: var(--purple-light); color: var(--purple); }
+.flow-tag.green { background: var(--green-light); color: var(--green); }
+
+.flow-arrow-seg {
+  flex: 1;
+  max-width: 100px;
+  min-width: 50px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flow-arrow-seg svg { display: block; width: 100%; height: 24px; }
+
+/* Data output sub-row */
+.flow-data-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 14px 0 32px;
+}
+.flow-data-node {
+  width: 86px;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.data-pip {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.data-pip.teal { background: var(--teal-light); }
+.data-pip.gold { background: var(--gold-light); }
+.data-pip.coral { background: var(--coral-light); }
+.data-pip.purple { background: var(--purple-light); }
+.data-pip.green { background: var(--green-light); }
+
+.data-line-seg {
+  flex: 1;
+  max-width: 100px;
+  min-width: 50px;
+  height: 4px;
+  border-radius: 2px;
+}
+.dl-tg { background: linear-gradient(90deg, var(--teal-mid), var(--gold)); }
+.dl-gc { background: linear-gradient(90deg, var(--gold), var(--coral)); }
+.dl-cp { background: linear-gradient(90deg, var(--coral), var(--purple)); }
+.dl-pg { background: linear-gradient(90deg, var(--purple), var(--green)); }
+
+/* Divider */
+.flow-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(15,32,48,0.08), transparent);
+  margin: 0 0 32px;
+}
+
+/* Flywheel */
+.flywheel-area {
+  display: flex;
+  justify-content: center;
+}
+.flywheel {
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+.flywheel-ring {
+  position: absolute;
+  inset: 24px;
+  border: 3px dashed rgba(10,143,143,0.2);
+  border-radius: 50%;
+}
+.flywheel-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--navy), #1A3548);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 20px rgba(15,32,48,0.25);
+  z-index: 3;
+}
+.fw-node {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  z-index: 3;
+}
+.fw-top { top: 0; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--teal), var(--teal-mid)); }
+.fw-right { top: 50%; right: 0; transform: translateY(-50%); background: linear-gradient(135deg, var(--coral), #F09880); }
+.fw-bottom { bottom: 0; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--purple), #8B7BB5); }
+.fw-left { top: 50%; left: 0; transform: translateY(-50%); background: linear-gradient(135deg, var(--gold), #E8C860); }
+.fw-arc {
+  position: absolute;
+  z-index: 2;
+}
+.fw-arc-tr { top: 14px; right: 22px; }
+.fw-arc-br { bottom: 14px; right: 22px; }
+.fw-arc-bl { bottom: 14px; left: 22px; }
+.fw-arc-tl { top: 14px; left: 22px; }
+
+
+/* ===== TEXT SECTIONS ===== */
+.context-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin: 40px auto 36px;
+  box-shadow: var(--card-shadow);
+  border-left: 5px solid var(--gold);
+  max-width: 920px;
+}
+.context-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.context-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.context-card .highlight {
+  color: var(--teal);
+  font-weight: 600;
+}
+
+.dual-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 920px;
+  margin: 0 auto 48px;
+}
+@media(max-width:700px){ .dual-box { grid-template-columns:1fr; } }
+.box {
+  background: white;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: var(--card-shadow);
+}
+.box h4 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+.box p { font-size: 0.9rem; color: var(--text-muted); }
+.box-edu { border-top: 4px solid var(--teal); }
+.box-clin { border-top: 4px solid var(--coral); }
+.box-edu h4 { color: var(--teal); }
+.box-clin h4 { color: var(--coral); }
+
+.section-header {
+  text-align: center;
+  margin: 48px 0 28px;
+}
+.section-header h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem;
+  color: var(--navy);
+}
+.section-header p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 8px auto 0;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto 60px;
+  padding-left: 52px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--teal), var(--gold) 40%, var(--coral) 70%, var(--purple) 100%);
+  border-radius: 2px;
+}
+.phase {
+  position: relative;
+  margin-bottom: 40px;
+}
+.phase-dot {
+  position: absolute;
+  left: -42px;
+  top: 6px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: white;
+  z-index: 2;
+  box-shadow: 0 0 0 5px var(--warm);
+}
+.phase-card {
+  background: white;
+  border-radius: 14px;
+  padding: 28px 28px 24px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s;
+}
+.phase-card:hover { transform: translateY(-2px); }
+.phase-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.phase-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.phase-time {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+.phase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media(max-width:600px){ .phase-grid { grid-template-columns:1fr; } }
+.phase-item {
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+.phase-item strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 3px; }
+
+.color-teal .phase-label { color: var(--teal); }
+.color-teal .phase-dot { background: var(--teal); }
+.color-teal .phase-item { background: var(--teal-light); color: var(--navy); }
+.color-teal .phase-item strong { color: var(--teal); }
+
+.color-gold .phase-label { color: var(--gold); }
+.color-gold .phase-dot { background: var(--gold); }
+.color-gold .phase-item { background: var(--gold-light); color: var(--navy); }
+.color-gold .phase-item strong { color: #B08A30; }
+
+.color-coral .phase-label { color: var(--coral); }
+.color-coral .phase-dot { background: var(--coral); }
+.color-coral .phase-item { background: var(--coral-light); color: var(--navy); }
+.color-coral .phase-item strong { color: var(--coral); }
+
+.color-purple .phase-label { color: var(--purple); }
+.color-purple .phase-dot { background: var(--purple); }
+.color-purple .phase-item { background: var(--purple-light); color: var(--navy); }
+.color-purple .phase-item strong { color: var(--purple); }
+
+.color-green .phase-label { color: var(--green); }
+.color-green .phase-dot { background: var(--green); }
+.color-green .phase-item { background: var(--green-light); color: var(--navy); }
+.color-green .phase-item strong { color: var(--green); }
+
+/* TRANSITION CALLOUT */
+.transition-callout {
+  max-width: 920px;
+  margin: -10px auto 48px;
+  background: linear-gradient(135deg, #1A3548 0%, var(--navy) 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 36px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+  align-items: start;
+  box-shadow: 0 4px 24px rgba(15,32,48,0.2);
+}
+@media(max-width:600px){ .transition-callout { grid-template-columns:1fr; } }
+.transition-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(92,197,197,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.transition-callout h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--teal-mid);
+}
+.transition-callout p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  line-height: 1.65;
+}
+
+/* REVENUE BAR */
+.revenue-visual {
+  max-width: 920px;
+  margin: 0 auto 60px;
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--card-shadow);
+}
+.revenue-visual h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  color: var(--navy);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.rev-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  gap: 14px;
+}
+.rev-label {
+  width: 120px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  text-align: right;
+}
+.rev-bar-track {
+  flex: 1;
+  height: 32px;
+  background: #F0EDE8;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.rev-bar-stack {
+  display: flex;
+  height: 100%;
+}
+.seg {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: white;
+}
+.seg-edu { background: var(--teal); border-radius: 8px 0 0 8px; }
+.seg-clin { background: var(--coral); border-radius: 0 8px 8px 0; }
+.rev-amount {
+  width: 90px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+.legend-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 16px;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+/* ADVISOR */
+.advisor-section {
+  max-width: 920px;
+  margin: 0 auto 48px;
+}
+.advisor-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--card-shadow);
+  border-left: 5px solid var(--purple);
+}
+.advisor-card h3 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.15rem;
+  color: var(--purple);
+  margin-bottom: 14px;
+}
+.advisor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+@media(max-width:600px){ .advisor-grid { grid-template-columns:1fr; } }
+.advisor-point {
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+}
+.advisor-point.pro { background: var(--green-light); }
+.advisor-point.con { background: var(--coral-light); }
+.advisor-point strong { display: block; margin-bottom: 4px; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.4px; }
+.advisor-point.pro strong { color: var(--green); }
+.advisor-point.con strong { color: var(--coral); }
+
+footer {
+  text-align: center;
+  padding: 36px 0 48px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+footer strong { color: var(--navy); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Sensory Bridges Roadmap</h1>
+    <p class="subtitle">Education-first launch with a clear path to clinical and medical channels — building proof, credibility, and data at every stage.</p>
+    <div class="badge-row">
+      <span class="badge badge-teal">Education Entry</span>
+      <span class="badge badge-gold">Clinical Expansion</span>
+      <span class="badge badge-coral">Medical Pathway</span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ===== VISUAL-ONLY FLOW ===== -->
+  <div class="visual-flow-section">
+    <div class="section-header" style="margin-top:40px;">
+      <h2>The Path at a Glance</h2>
+    </div>
+
+    <div class="flow-canvas">
+      <div class="flow-scroll">
+
+        <!-- Phase icons row -->
+        <div class="flow-phase-row">
+          <div class="flow-node">
+            <div class="flow-icon-ring teal">🏫</div>
+            <div class="flow-tag teal">2026</div>
+          </div>
+          <div class="flow-arrow-seg">
+            <svg viewBox="0 0 100 24" preserveAspectRatio="none"><defs><lineargradient id="a1"><stop offset="0%" stop-color="#0A8F8F"></stop><stop offset="100%" stop-color="#D4A843"></stop></lineargradient></defs><line x1="6" y1="12" x2="82" y2="12" stroke="url(#a1)" stroke-width="2.5" stroke-linecap="round"></line><polygon points="80,6 96,12 80,18" fill="#D4A843"></polygon></svg>
+          </div>
+          <div class="flow-node">
+            <div class="flow-icon-ring gold">🩺</div>
+            <div class="flow-tag gold">2027</div>
+          </div>
+          <div class="flow-arrow-seg">
+            <svg viewBox="0 0 100 24" preserveAspectRatio="none"><defs><lineargradient id="a2"><stop offset="0%" stop-color="#D4A843"></stop><stop offset="100%" stop-color="#E8765A"></stop></lineargradient></defs><line x1="6" y1="12" x2="82" y2="12" stroke="url(#a2)" stroke-width="2.5" stroke-linecap="round"></line><polygon points="80,6 96,12 80,18" fill="#E8765A"></polygon></svg>
+          </div>
+          <div class="flow-node">
+            <div class="flow-icon-ring coral">🏥</div>
+            <div class="flow-tag coral">2028</div>
+          </div>
+          <div class="flow-arrow-seg">
+            <svg viewBox="0 0 100 24" preserveAspectRatio="none"><defs><lineargradient id="a3"><stop offset="0%" stop-color="#E8765A"></stop><stop offset="100%" stop-color="#6B5B95"></stop></lineargradient></defs><line x1="6" y1="12" x2="82" y2="12" stroke="url(#a3)" stroke-width="2.5" stroke-linecap="round"></line><polygon points="80,6 96,12 80,18" fill="#6B5B95"></polygon></svg>
+          </div>
+          <div class="flow-node">
+            <div class="flow-icon-ring purple">💳</div>
+            <div class="flow-tag purple">2029</div>
+          </div>
+          <div class="flow-arrow-seg">
+            <svg viewBox="0 0 100 24" preserveAspectRatio="none"><defs><lineargradient id="a4"><stop offset="0%" stop-color="#6B5B95"></stop><stop offset="100%" stop-color="#3D8B37"></stop></lineargradient></defs><line x1="6" y1="12" x2="82" y2="12" stroke="url(#a4)" stroke-width="2.5" stroke-linecap="round"></line><polygon points="80,6 96,12 80,18" fill="#3D8B37"></polygon></svg>
+          </div>
+          <div class="flow-node">
+            <div class="flow-icon-ring green">🚀</div>
+            <div class="flow-tag green">2030+</div>
+          </div>
+        </div>
+
+        <!-- Data outputs row -->
+        <div class="flow-data-row">
+          <div class="flow-data-node"><div class="data-pip teal">📊</div></div>
+          <div class="data-line-seg dl-tg"></div>
+          <div class="flow-data-node"><div class="data-pip gold">📄</div></div>
+          <div class="data-line-seg dl-gc"></div>
+          <div class="flow-data-node"><div class="data-pip coral">🔬</div></div>
+          <div class="data-line-seg dl-cp"></div>
+          <div class="flow-data-node"><div class="data-pip purple">✅</div></div>
+          <div class="data-line-seg dl-pg"></div>
+          <div class="flow-data-node"><div class="data-pip green">🌐</div></div>
+        </div>
+
+        <div class="flow-divider"></div>
+
+        <!-- Flywheel -->
+        <div class="flywheel-area">
+          <div class="flywheel">
+            <div class="flywheel-ring"></div>
+            <div class="flywheel-center">⌚</div>
+            <div class="fw-node fw-top">🏫</div>
+            <div class="fw-node fw-right">🏥</div>
+            <div class="fw-node fw-bottom">💳</div>
+            <div class="fw-node fw-left">📊</div>
+            <svg class="fw-arc fw-arc-tr" width="44" height="44" viewBox="0 0 44 44"><path d="M6 36 Q6 6 36 6" stroke="var(--teal-mid)" stroke-width="2.5" fill="none" stroke-linecap="round"></path><polygon points="34,1 40,6 33,10" fill="var(--teal-mid)"></polygon></svg>
+            <svg class="fw-arc fw-arc-br" width="44" height="44" viewBox="0 0 44 44"><path d="M6 6 Q6 38 36 38" stroke="var(--coral)" stroke-width="2.5" fill="none" stroke-linecap="round"></path><polygon points="34,34 40,38 34,44" fill="var(--coral)"></polygon></svg>
+            <svg class="fw-arc fw-arc-bl" width="44" height="44" viewBox="0 0 44 44"><path d="M38 6 Q38 38 6 38" stroke="var(--purple)" stroke-width="2.5" fill="none" stroke-linecap="round"></path><polygon points="1,36 6,44 10,36" fill="var(--purple)"></polygon></svg>
+            <svg class="fw-arc fw-arc-tl" width="44" height="44" viewBox="0 0 44 44"><path d="M38 38 Q38 6 6 6" stroke="var(--gold)" stroke-width="2.5" fill="none" stroke-linecap="round"></path><polygon points="1,10 6,1 10,10" fill="var(--gold)"></polygon></svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Context Card -->
+  <div class="context-card">
+    <h3>The Strategic Question</h3>
+    <p>Should Sensory Bridges bypass education and <span class="highlight">go directly to major autism centers with a clinical-first approach?</span> This roadmap shows why education is the proof-of-concept engine that <span class="highlight">makes the clinical pathway actually work</span> — and that clinical expansion is already baked into the plan starting in Year 2.</p>
+  </div>
+
+  <div class="dual-box">
+    <div class="box box-edu">
+      <h4>Why Education First</h4>
+      <p>Schools buy with IDEA Part B funding that already exists. No FDA clearance required. Faster sales cycles. Product generates the outcome data and IEP documentation proof that clinical partners will demand before they say yes. Education is the proof-of-concept engine.</p>
+    </div>
+    <div class="box box-clin">
+      <h4>Why Clinical Is Already In the Plan</h4>
+      <p>The clinical-first instinct is right — clinical/medical channels unlock bigger contracts and legitimacy. The business model already includes OT/therapy network sales starting Year 1, Medicaid waiver research starting Year 2, and a full clinical reimbursement pathway by Year 4. Education builds the evidence; clinical scales the revenue.</p>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="section-header">
+    <h2>The Roadmap: Education → Clinical → Medical</h2>
+    <p>Five phases showing how each stage builds the foundation for the next.</p>
+  </div>
+
+  <div class="timeline">
+
+    <div class="phase color-teal">
+      <div class="phase-dot">1</div>
+      <div class="phase-card">
+        <div class="phase-label">Phase 1 — Education Beachhead</div>
+        <div class="phase-title">Paid Pilots &amp; Proof of Concept</div>
+        <div class="phase-time">Now → End of 2026 (Months 1–12)</div>
+        <div class="phase-grid">
+          <div class="phase-item">
+            <strong>What's Happening</strong>
+            5–8 paid school district pilots at $5K–$10K each. Product positioned as assistive technology (IDEA) — not medical. Funded through existing IDEA Part B budgets.
+          </div>
+          <div class="phase-item">
+            <strong>Why It Matters</strong>
+            Every pilot generates real outcome data (behavioral incident reduction, IEP progress). This is the clinical evidence that autism centers will require before signing anything.
+          </div>
+          <div class="phase-item">
+            <strong>Clinical Seed Planting</strong>
+            8–10 OT practices get free device trials and structured data collection agreements. These become clinical champions who later drive referrals.
+          </div>
+          <div class="phase-item">
+            <strong>Key Milestones</strong>
+            Hire Clinical Outcomes Lead. Submit first IRB protocol. First case study submitted to peer-reviewed OT journal. $350K ARR target.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase color-gold">
+      <div class="phase-dot">2</div>
+      <div class="phase-card">
+        <div class="phase-label">Phase 2 — Institutional Scale + Clinical Entry</div>
+        <div class="phase-title">District Contracts &amp; Therapy Network Sales</div>
+        <div class="phase-time">2027 (Months 13–24)</div>
+        <div class="phase-grid">
+          <div class="phase-item">
+            <strong>Education Channel</strong>
+            15 district contracts at $60K average ACV. First enterprise sales hire. Expansion revenue from Year 1 accounts (NRR 130%+). State education agency partnerships begin.
+          </div>
+          <div class="phase-item">
+            <strong>Clinical Channel Opens</strong>
+            25 OT/ABA therapy network accounts at $18K average ACV. Therapy practices paying from operational budgets — no grant dependency. Insurance documentation toolkit add-on launched.
+          </div>
+          <div class="phase-item">
+            <strong>Evidence Building</strong>
+            First peer-reviewed outcomes publication. Case series across 5–10 sites. Begin Medicaid EPSDT eligibility research in 2 states. IES grant application submitted.
+          </div>
+          <div class="phase-item">
+            <strong>Key Milestones</strong>
+            Pre-seed close ($750K–$1M). Published clinical evidence. Medicaid conversations initiated. $1.4M ARR target.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="transition-callout">
+    <div class="transition-icon">⟶</div>
+    <div>
+      <h3>The Pivot Point: Education Data Unlocks Clinical Credibility</h3>
+      <p>By the end of Phase 2, Sensory Bridges has something no competitor can claim: peer-reviewed outcome data from real school deployments, a proprietary behavioral metric embedded in IEP documents, and 40+ institutional accounts proving market demand. This is exactly the proof of concept that makes the clinical approach viable — not aspirational. Without this data, approaching top clinical centers is premature. With it, you arrive with evidence, not just a pitch.</p>
+    </div>
+  </div>
+
+  <div class="timeline" style="margin-top:0;">
+
+    <div class="phase color-coral">
+      <div class="phase-dot">3</div>
+      <div class="phase-card">
+        <div class="phase-label">Phase 3 — Clinical Acceleration</div>
+        <div class="phase-title">Autism Centers &amp; Medical Advisory Board</div>
+        <div class="phase-time">2028 (Months 25–36)</div>
+        <div class="phase-grid">
+          <div class="phase-item">
+            <strong>Major Center Partnerships</strong>
+            Partner with 5–10 major autism/neurodevelopment centers nationally. Built on 2 years of published data and OT network referrals. Announce Medical Advisory Board (5 distinguished leaders in autism care).
+          </div>
+          <div class="phase-item">
+            <strong>Hardware Partnership Leverage</strong>
+            Announce the B2B hardware relationship formally. Major consumer technology platform partnership is now public-facing, lending institutional credibility to every clinical conversation.
+          </div>
+          <div class="phase-item">
+            <strong>Data Collection at Scale</strong>
+            First 2,500 device rollout to dedicated clinical centers. Structured feedback loop: What works? What doesn't? What needs to change? Product refinement powered by 2 years of prior real-world school iteration.
+          </div>
+          <div class="phase-item">
+            <strong>Key Milestones</strong>
+            Series A close ($6M–$10M). Multi-site prospective study. Medicaid waiver applications active in 2–3 states. CPT code advocacy begins. $3.5M+ ARR target.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase color-purple">
+      <div class="phase-dot">4</div>
+      <div class="phase-card">
+        <div class="phase-label">Phase 4 — Reimbursement &amp; Medical Integration</div>
+        <div class="phase-title">Medicaid Coverage &amp; Prescriber Network</div>
+        <div class="phase-time">2029 (Months 37–48)</div>
+        <div class="phase-grid">
+          <div class="phase-item">
+            <strong>Medicaid Pathway</strong>
+            Medicaid EPSDT coverage approved in 1–2 states. Device costs families nothing — state Medicaid pays. This is the game-changer: removes all price friction from the buyer.
+          </div>
+          <div class="phase-item">
+            <strong>Prescriber Network</strong>
+            OTs and SLPs can now prescribe the device through insurance channels. Building the same reimbursement navigation infrastructure that made Tobii Dynavox a publicly traded company.
+          </div>
+          <div class="phase-item">
+            <strong>Education + Clinical Flywheel</strong>
+            Schools generate data → clinical centers validate outcomes → insurance covers the device → more schools adopt because families can get it covered → more data flows in. Self-reinforcing loop.
+          </div>
+          <div class="phase-item">
+            <strong>Key Milestones</strong>
+            80+ institutional accounts. NRR 120%+. 2+ peer-reviewed publications. $10M–$15M ARR. Series B from position of strength.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase color-green">
+      <div class="phase-dot">5</div>
+      <div class="phase-card">
+        <div class="phase-label">Phase 5 — Full Medical Platform (Optional)</div>
+        <div class="phase-title">FDA Clearance &amp; National Reimbursement</div>
+        <div class="phase-time">2030+ (Months 49+)</div>
+        <div class="phase-grid">
+          <div class="phase-item">
+            <strong>FDA Decision Point</strong>
+            With 4+ years of clinical data, published outcomes, and Medicaid coverage in multiple states, FDA De Novo clearance becomes a strategic option — not a survival requirement. This is the "digital therapeutics" pathway, entered from a position of revenue strength.
+          </div>
+          <div class="phase-item">
+            <strong>National Scale</strong>
+            State-level population health contracts. National reimbursement across all 50 states. $50M–$150M ARR ceiling as EdTech platform; $200M–$500M ceiling if full medical reimbursement is achieved.
+          </div>
+          <div class="phase-item">
+            <strong>The Data Moat</strong>
+            Years of proprietary behavioral data across thousands of neurodivergent students — a dataset no competitor can replicate. Research partnerships with academic medical centers. Pharmaceutical companies paying for access to de-identified behavioral data.
+          </div>
+          <div class="phase-item">
+            <strong>The Full Vision Realized</strong>
+            Legitimacy. B2B partnership. Medical board. National center partnerships. Data-driven product refinement. Proof of concept proven. All achieved — built on a foundation of education revenue rather than clinical speculation.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- REVENUE VISUAL -->
+  <div class="revenue-visual">
+    <h3>Revenue Mix Shifts from Education to Clinical Over Time</h3>
+    
+    <div class="rev-row">
+      <div class="rev-label">2026</div>
+      <div class="rev-bar-track">
+        <div class="rev-bar-stack" style="width:6%">
+          <div class="seg seg-edu" style="width:85%;border-radius:8px 0 0 8px;"></div>
+          <div class="seg seg-clin" style="width:15%;border-radius:0 8px 8px 0;"></div>
+        </div>
+      </div>
+      <div class="rev-amount">~$350K</div>
+    </div>
+    
+    <div class="rev-row">
+      <div class="rev-label">2027</div>
+      <div class="rev-bar-track">
+        <div class="rev-bar-stack" style="width:20%">
+          <div class="seg seg-edu" style="width:65%;border-radius:8px 0 0 8px;"></div>
+          <div class="seg seg-clin" style="width:35%;border-radius:0 8px 8px 0;"></div>
+        </div>
+      </div>
+      <div class="rev-amount">~$1.4M</div>
+    </div>
+    
+    <div class="rev-row">
+      <div class="rev-label">2028</div>
+      <div class="rev-bar-track">
+        <div class="rev-bar-stack" style="width:45%">
+          <div class="seg seg-edu" style="width:50%;border-radius:8px 0 0 8px;"></div>
+          <div class="seg seg-clin" style="width:50%;border-radius:0 8px 8px 0;"></div>
+        </div>
+      </div>
+      <div class="rev-amount">~$3.5M</div>
+    </div>
+    
+    <div class="rev-row">
+      <div class="rev-label">2029</div>
+      <div class="rev-bar-track">
+        <div class="rev-bar-stack" style="width:72%">
+          <div class="seg seg-edu" style="width:35%;border-radius:8px 0 0 8px;"></div>
+          <div class="seg seg-clin" style="width:65%;border-radius:0 8px 8px 0;"></div>
+        </div>
+      </div>
+      <div class="rev-amount">~$10M+</div>
+    </div>
+    
+    <div class="rev-row">
+      <div class="rev-label">2030+</div>
+      <div class="rev-bar-track">
+        <div class="rev-bar-stack" style="width:100%">
+          <div class="seg seg-edu" style="width:25%;border-radius:8px 0 0 8px;"></div>
+          <div class="seg seg-clin" style="width:75%;border-radius:0 8px 8px 0;"></div>
+        </div>
+      </div>
+      <div class="rev-amount">$50M–$150M+</div>
+    </div>
+
+    <div class="legend-row">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--teal);"></div> Education (Districts / IDEA)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--coral);"></div> Clinical &amp; Medical (Therapy / Medicaid / Insurance)</div>
+    </div>
+  </div>
+
+  <!-- ADVISOR ANALYSIS -->
+  <div class="advisor-section">
+    <div class="advisor-card">
+      <h3>Mapping the Clinical-First Approach to This Roadmap</h3>
+      <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:16px;">Every element of the clinical-first vision is in the plan — the question is timing and sequence.</p>
+      <div class="advisor-grid">
+        <div class="advisor-point pro">
+          <strong>Announce B2B hardware partnership</strong>
+          Phase 3 (2028) — after embargo lifts and education traction proves market. Announcing too early without revenue creates a "so what?" from clinical buyers.
+        </div>
+        <div class="advisor-point pro">
+          <strong>Partner with top autism centers</strong>
+          Phase 3 (2028) — but seeded by OT clinical champions recruited in Phase 1. By 2028, you approach centers with published data, not just a prototype.
+        </div>
+        <div class="advisor-point pro">
+          <strong>Medical Advisory Board (5 leaders)</strong>
+          Phase 3 (2028) — formalize the advisory board with distinguished autism care leaders. This follows the Wearable Devices playbook already in the strategy.
+        </div>
+        <div class="advisor-point pro">
+          <strong>Roll out 2,500 bands to centers</strong>
+          Phase 3 (2028) — funded by Series A ($6M–$10M), not pre-seed. Deploying 2,500 units requires manufacturing capital that doesn't exist pre-revenue.
+        </div>
+        <div class="advisor-point pro">
+          <strong>Collect data and learn</strong>
+          Every phase — data collection starts Day 1 in schools, not in Phase 3. By the time autism centers get devices, the product has already been refined through 2 years of real-world deployment.
+        </div>
+        <div class="advisor-point con">
+          <strong>Why not skip straight to clinical?</strong>
+          Clinical centers require published evidence, IRB-approved protocols, and HIPAA compliance. Schools operate under FERPA (simpler), buy with existing budgets (IDEA), and don't require FDA positioning. Education is faster to revenue and generates the proof clinical needs.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <strong>Sensory Bridges, Inc.</strong> — Chattanooga, TN<br>
+  Internal Strategic Document — March 2026<br>
+  <em>"Every child deserves the chance to find their own voice — not be corrected for it."</em>
+</footer>
+
+
+
+</body></html>
